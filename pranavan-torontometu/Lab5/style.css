@@ -1,0 +1,132 @@
+﻿
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    background-color: #f0f8ff; 
+    color: #333; 
+    margin: 20pt; 
+}
+
+
+h1 {
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 2em; 
+    color: #4B0082; 
+}
+
+h3 {
+    font-size: 1.5em; 
+    color: #6A5ACD; 
+}
+
+p {
+    font-size: 1em; 
+    color: #444; 
+}
+
+
+a {
+    color: #2980b9; 
+    text-decoration: none;
+}
+
+    a:visited {
+        color: #8e44ad; 
+    }
+
+    a:hover {
+        color: #e74c3c; 
+        text-decoration: underline; 
+    }
+
+    a:active {
+        color: #c0392b; 
+    }
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th, td {
+    border: 1px solid #333; 
+    padding: 10px; 
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; 
+    font-weight: bold; 
+}
+
+td {
+    background-color: #f2f2f2;
+}
+
+#profileImage {
+    width: 150px; 
+    transition: transform 0.3s;
+}
+
+    #profileImage.enlarged {
+        transform: scale(1.5); 
+    }
+
+nav {
+    background-color: #001F3F; 
+    padding: 10px; 
+    position: relative; 
+}
+
+    nav ul {
+        list-style-type: none; 
+        padding: 0; 
+        margin: 0; 
+    }
+
+    nav > ul > li {
+        display: inline-block; 
+        margin-right: 20px; 
+        position: relative; 
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+
+        nav a:hover {
+            background-color: #FFD700; 
+            
+        }
+
+   
+    nav ul ul {
+        display: none; 
+        position: absolute;
+        background-color: #FFD700; 
+        padding: 10px; 
+        z-index: 1000; 
+    }
+
+    nav ul li:hover > ul {
+        display: block; 
+    }
+
+    nav ul ul li {
+        display: block; 
+        margin: 0;  
+    }
+
+        nav ul ul li a {
+            padding: 5px 10px;
+            white-space: nowrap; 
+        }
+
