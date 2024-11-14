@@ -1,63 +1,50 @@
-document.getElementById('nameButton').addEventListener('click', function () {
-    let name = prompt("Please enter your name:");
-    if (name) {
-        document.getElementById('greeting').innerText = "Hello, " + name + "!";
-    }
-});
-
+// Toggle enlarged class for profile image on click
 const profileImage = document.getElementById('profileImage');
 profileImage.addEventListener('click', function () {
     this.classList.toggle('enlarged');
 });
 
+// Navigation hover effect fixes
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => {
     link.addEventListener('mouseover', function () {
-        this.style.color = '#e74c3c';
+        this.style.backgroundColor = '#e74c3c';
+        this.style.color = '#ffffff';
     });
     link.addEventListener('mouseout', function () {
+        this.style.backgroundColor = '';
         this.style.color = '';
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("userInputForm");
-
-    // Notifies User Of Form Submission
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        saveFormData();
-        alert("Form Submitted");
-    });
-
-    // Clears All Fields When Clear Button Is Pressed
-    form.addEventListener("reset", function () {
-        // Optional: Handle any specific reset actions if needed
-    });
-
-    // Save Data To Local Storage
-    function saveFormData() {
-        const formData = {
-            fname: document.getElementById("fname").value,
-            lname: document.getElementById("lname").value,
-            dob: document.getElementById("dob").value,
-            ageGroup: document.getElementById("ageGroup").value,
-            position: form.position.value,
-            portfolio_aspects: Array.from(document.querySelectorAll("input[name='portfolio_aspects']:checked")).map(
-                (checkbox) => checkbox.value
-            ),
-            portfolio_opinions: document.querySelector("input[name='portfolio_opinions']").value,
-            likelihood: document.getElementById("likelihoodSlider").value,
-            comments: document.getElementById("comments").value
-        };
-
-        localStorage.setItem("formData", JSON.stringify(formData));
-    }
+// Enlarge All Text Button
+document.getElementById('enlargeTextButton').addEventListener('click', function () {
+    document.body.classList.toggle('large-text');  // Apply class for enlarged text
 });
 
-// Update the label based on the slider value
-function updateLabel(value) {
-    const sliderValue = document.getElementById('sliderValue');
-    const labels = ['Very Unlikely', 'Unlikely', 'Neutral', 'Likely', 'Very Likely'];
-    sliderValue.innerText = labels[value]; // Update the label based on the slider value
-}
+// Change Text/Background Color Button
+document.getElementById('changeColorButton').addEventListener('click', function () {
+    // Toggle the color scheme
+    if (document.body.style.backgroundColor === 'black') {
+        document.body.style.backgroundColor = '#f0f8ff';
+        document.body.style.color = '#333';
+    } else {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = '#FFF';
+    }
+
+    // Select and update colors for headings, navigation links, paragraphs, and table text
+    document.querySelectorAll('h1, h2, h3, p, nav a, table th, table td').forEach(element => {
+        element.style.color = document.body.style.color;
+    });
+});
+
+// Show Alt Text Button for Images
+document.querySelectorAll('.showAltTextButton').forEach((button, index) => {
+    button.addEventListener('click', function () {
+        const image = document.querySelectorAll('.captioned-image')[index];
+        if (image) {
+            alert(image.alt);  // Display the alt text of the corresponding image
+        }
+    });
+});
