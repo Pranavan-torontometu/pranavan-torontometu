@@ -1,0 +1,177 @@
+﻿/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14pt; /* Increased for better readability */
+    background-color: #f9f9fb;
+    color: #333;
+    margin: 20pt;
+}
+
+h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.75em;
+    color: #34495e;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #6A5ACD;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #001F3F;
+    padding: 10px;
+    position: relative;
+}
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    nav > ul > li {
+        margin-right: 20px;
+        position: relative;
+    }
+
+    nav a {
+        color: #ffffff;
+        padding: 5px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        nav a:hover {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+    nav ul ul {
+        display: none;
+        position: absolute;
+        background-color: #f39c12;
+        padding: 10px;
+    }
+
+    nav ul li:hover > ul {
+        display: block;
+    }
+
+    nav ul ul li {
+        display: block;
+        margin: 0;
+    }
+
+        nav ul ul li a {
+            padding: 5px 10px;
+            color: #333;
+        }
+
+/* Image Styling */
+#profileImage {
+    width: 120px;
+    transition: transform 0.3s;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+    #profileImage.enlarged {
+        transform: scale(1.2);
+    }
+
+/* Form and Table Styling */
+form {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #bdc3c7;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: #e74c3c;
+    }
+/* Enlarge all text on the screen */
+/* CSS to enlarge text */
+body.large-text {
+    font-size: calc(100% + 10px); /* Increase all text by 6px */
+}
+
+    body.large-text h1 {
+        font-size: calc(2.5em + 6px); /* Adjust h1 size */
+    }
+
+    body.large-text h2 {
+        font-size: calc(2em + 6px); /* Adjust h2 size */
+    }
+
+    body.large-text h3 {
+        font-size: calc(1.5em + 6px); /* Adjust h3 size */
+    }
+
+    body.large-text p {
+        font-size: calc(1em + 6px); /* Adjust paragraph size */
+    }
+
+/* Alternate text and background color scheme */
+.alt-color-scheme,
+.alt-colour-scheme p {
+    background-color: #333333;
+    color: #f2f2f2;
+}
+
+    .alt-color-scheme h1,
+    .alt-color-scheme h2,
+    .alt-color-scheme h3 {
+        color: #ffd700; /* Adjust heading colors for visibility */
+    }
+
+
+.captioned-image {
+    width: 200px; /* Set a specific width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
